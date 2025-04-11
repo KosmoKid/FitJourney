@@ -3,7 +3,7 @@ import openai
 
 
 try:
-    api_key = st.secrets["api"]["key"]
+    openai.api_key = st.secrets["api"]["key"]
 except KeyError:
     st.error("API key not found. Please check your secrets.toml file.")
 
