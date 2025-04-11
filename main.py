@@ -25,12 +25,12 @@ if "meal_plan" not in st.session_state:
 def ask_chatgpt(question):
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4o-mini",
+            model="gpt-4o-mini",  # Consider verifying that this model is valid
             messages=[{"role": "user", "content": question}]
         )
         return response.choices[0].message["content"].strip()
     except Exception as e:
-        print("An error occurred:", e)
+        st.error(f"An error occurred: {e}")
         return None
 
 # Parse ChatGPT response
