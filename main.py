@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 
-api_key = st.secrets["api"]["key"]
+api_key = st.secrets["apikey"]["key"]
 
 st.set_page_config(page_title="Fitness Plan Generator", page_icon="🏋️", layout="centered")
 
