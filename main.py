@@ -2,7 +2,10 @@ import streamlit as st
 import openai
 
 
-api_key = st.secrets["apikey"]["key"]
+try:
+    api_key = st.secrets["api"]["key"]
+except KeyError:
+    st.error("API key not found. Please check your secrets.toml file.")
 
 st.set_page_config(page_title="Fitness Plan Generator", page_icon="🏋️", layout="centered")
 
