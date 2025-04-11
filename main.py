@@ -2,12 +2,15 @@ import streamlit as st
 import openai
 
 
+st.set_page_config(page_title="Fitness Plan Generator", page_icon="🏋️", layout="centered")
+
 try:
-    openai.api_key = st.secrets["api"]["key"]
+   openai.api_key = st.secrets["api"]["key"]
+    
 except KeyError:
     st.error("API key not found. Please check your secrets.toml file.")
 
-st.set_page_config(page_title="Fitness Plan Generator", page_icon="🏋️", layout="centered")
+
 
 # Initialize session variables
 if "stage" not in st.session_state:
