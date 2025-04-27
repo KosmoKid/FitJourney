@@ -1,7 +1,7 @@
 import streamlit as st
 import openai
 
-st.set_page_config(page_title="Fitness Plan Generator", page_icon="🏋️", layout="centered")
+st.set_page_config(page_title="FitJourney", page_icon="🏋️", layout="centered")
 
 
 
@@ -65,7 +65,7 @@ def ask_question(user_data):
 
 # Input Form (Only show if no plan generated)
 if st.session_state.stage == 'input':
-    st.title("🏋️ Fitness Plan Generator")
+    st.title("FitJourney's Plan Generator")
     st.subheader("Enter your details:")
 
     with st.form("user_input_form"):
